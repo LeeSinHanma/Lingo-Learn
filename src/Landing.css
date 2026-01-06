@@ -1,0 +1,109 @@
+/* Full-bleed landing hero with left content and CTA */
+:root{
+  --bg: #ffffff;
+  --accent: #111827;
+  --muted: #6b7280;
+  --cta-bg: #111827;
+  --cta-color: #ffffff;
+}
+
+html,body,#root{
+  height:100%;
+}
+
+.landing {
+  min-height:100vh;
+  width:100%;
+  background: linear-gradient(180deg,#fafafa 0%, #fff 100%);
+  display:flex;
+  align-items:stretch;
+  box-sizing:border-box;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+.landing__hero{
+  flex:1 1 60%;
+  display:flex;
+  align-items:center;
+  padding:80px 120px;
+}
+
+.landing__content{
+  max-width:900px;
+}
+
+.landing__eyebrow{
+  color:var(--muted);
+  font-size:14px;
+  margin-bottom:12px;
+}
+
+.landing__title{
+  color:var(--accent);
+  font-size:48px;
+  line-height:1.05;
+  margin:0 0 18px 0;
+  font-weight:700;
+}
+
+.landing__subtitle{
+  color:var(--muted);
+  font-size:18px;
+  margin:0 0 28px 0;
+  max-width:680px;
+}
+
+.landing__cta-row{
+  display:flex;
+  gap:12px;
+  align-items:center;
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:12px 20px;
+  border-radius:8px;
+  font-weight:600;
+  cursor:pointer;
+  border:1px solid transparent;
+}
+
+.btn--primary{
+  background:var(--cta-bg);
+  color:var(--cta-color);
+}
+
+.btn--ghost{
+  background:transparent;
+  color:var(--accent);
+  border-color:#e6e6e6;
+}
+
+/* Right-side illustration / promo area */
+.landing__visual{
+  flex:1 1 40%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:transparent;
+  padding:40px;
+}
+
+/* Utility */
+.text-small{font-size:13px;color:var(--muted);} 
+
+/* Responsive: keep usable on smaller screens */
+@media (max-width: 1024px){
+  .landing__hero{padding:48px 40px;}
+  .landing__title{font-size:36px}
+  .landing__subtitle{font-size:16px}
+  .landing__visual{display:none}
+}
+
+@media (max-width: 640px){
+  .landing{flex-direction:column}
+  .landing__hero{padding:28px}
+  .landing__title{font-size:28px}
+}
