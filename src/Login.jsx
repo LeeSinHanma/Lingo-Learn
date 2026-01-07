@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './Login.css';
 
-export default function Login() {
+export default function Login({ onSwitchToRegistration }) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -77,7 +77,7 @@ export default function Login() {
         </form>
 
         <p className="signup-prompt">
-          Don't have an account? <a href="#signup">Sign up</a>
+          Don't have an account? <a href="#" onClick={(e) => { e.preventDefault(); onSwitchToRegistration(); }}>Sign up</a>
         </p>
       </div>
     </div>

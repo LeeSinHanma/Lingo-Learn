@@ -7,8 +7,10 @@ export default function Landing({ onGetStarted }) {
       <div className="landing__hero">
         <div className="landing__content">
           <div className="landing__eyebrow">Learn languages faster</div>
-          <h1 className="landing__title">LingoLearn — practice, review, remember</h1>
-          <p className="landing__subtitle">Short daily lessons, smart review scheduling, and interactive exercises to help you learn faster.</p>
+          <h1 className="landing__title">LingoLearn — practice with people</h1>
+          <p className="landing__subtitle">
+            Connect with native speakers and fellow learners to enhance your language skills through real conversations and interactive exercises.
+            </p>
 
           <div className="landing__cta-row">
             <button className="btn btn--primary" onClick={onGetStarted}>Get started</button>
